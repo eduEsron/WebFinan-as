@@ -130,3 +130,68 @@ main p, main h2{
     background-color: transparent;
     color: white;
 }
+#user_photo{
+    width: 35px;
+    height: 33px;
+    border-radius: 50%;
+    border: 2px solid white;
+    box-shadow: 1px 1px 1px gray;
+}
+header span{
+    display: flex;
+    gap: 15px;
+}
+header span p{
+    font-size: 15px;
+}
+.Main_M{
+    display: flex;
+    justify-content: center;
+    padding: 5%;
+    margin: 0;
+}
+#MyFinancesTxt{
+    display: flex;
+    justify-content: center;
+    align-items: end;
+    
+}
+#MyFinancesTxt h2{
+    color: white;
+    font-family: Arial;   
+}
+.financas-display{
+    width: 70%;
+    border-radius: 0.5rem;
+    background-color: rgb(65, 64, 64);
+}
+#financas-header{
+    background-color: rgb(51, 51, 51);
+    display: flex;
+    justify-content: space-between;
+}
+#financas-header button, select, option{
+    background-color: rgba(255, 255, 255, 0);
+    border: 1px solid ;
+    border-radius: 0.15rem;
+    padding: 4px 12px;
+    color: white;
+    transition: 0.2s;
+    font-family: Arial;
+    font-size: 13.3333px;
+    text-decoration: none;
+    cursor: pointer;
+}
+#financas-header select option{
+    background-color: rgb(65, 64, 64);;
+}
+.financas-display h2, p{
+    padding-top: 1%;
+    padding-left: 2.5%;
+}
+.desc-fin{
+    font-size: 15ox;
+}
+.Main_M hr{
+    width: 99%;
+}
