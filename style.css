@@ -104,7 +104,7 @@ main p, main h2{
     padding-top: 5%;
     padding-bottom: 5%;
 }
-.LoginMain div button{
+button{
     background-color: rgba(255, 255, 255, 0);
     border: 1px solid ;
     border-radius: 0.15rem;
@@ -139,10 +139,11 @@ main p, main h2{
 }
 header span{
     display: flex;
+    align-items: center;
     gap: 15px;
 }
 header span p{
-    font-size: 15px;
+    font-size: 14px;
 }
 .Main_M{
     display: flex;
@@ -183,15 +184,71 @@ header span p{
     cursor: pointer;
 }
 #financas-header select option{
-    background-color: rgb(65, 64, 64);;
+    background-color: rgb(65, 64, 64);
 }
 .financas-display h2, p{
     padding-top: 1%;
     padding-left: 2.5%;
 }
 .desc-fin{
-    font-size: 15ox;
+    font-size: 15px;
 }
 .Main_M hr{
     width: 99%;
+}
+.Main_Create{
+    display: flex;
+    justify-content: center;
+    padding: 5%;
+    
+    
+}
+.create_div{
+    width: 65%;
+    border-radius: 0.3rem;
+    background-color: rgb(65, 64, 64);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    padding-bottom: 5%;
+}
+.row{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    gap: 15px;
+}
+.create_div span{
+    display: flex;
+    gap: 15px;
+    padding: 2.5%;
+}
+#createtxt{
+    display: flex;
+    justify-content: center;
+    background-color: rgb(51, 51, 51);
+    width: 100%;
+    padding: 0;
+    border-radius: 0.3rem;
+}
+#createtxt h1{
+    color: white;
+    font-family: Arial;
+    
+}
+#create-financas{
+    background-color: rgba(255, 255, 255, 0);
+    border: 1px solid ;
+    border-radius: 0.15rem;
+    padding: 4px 12px;
+    color: white;
+    transition: 0.2s;
+    font-family: Arial;
+    font-size: 13.3333px;
+    text-decoration: none;
+    cursor: pointer;
+}
+#create-financas, option{
+    background-color: rgba(51, 51, 51);
 }
