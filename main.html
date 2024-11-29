@@ -20,23 +20,25 @@
     </header>
     <hr>
     <span id="MyFinancesTxt"><i><h2>Minhas Finanças:</h2></i></span>
+    <div class="CreateFinances">
+        <div>
+        <span><h2>Crie suas finanças:</h2></span>
+        <span><p>Nome da finança: </p></span> <input type="text" id="newName">
+        <span><p>Categoria: </p>
+            <select name="createcategoria" id="createCategoria">
+            <option value="receitas">Receitas</option>
+            <option value="despesa">Despesas</option>
+        </select></span>
+        <span>
+            <p>Data: </p> <input type="text" id="newData">
+        </span>
+        <span><p>Valor: </p> <input type="text" id="newValor"></span>
+        </div>
+        
+    </div>
     <main class="Main_M">
-            <div class="financas-display">
-                <span id="financas-header">
-                    <button>+ Criar</button>
-                    <select name="select-financas" id="select-financas">
-                        <option value="receitas">Receitas</option>
-                        <option value="despesa">Despesas</option>
-                    </select>
-                </span>
-                <h2 class="name-fin">Name__</h2>
-                <p class="categoria">Categoria:</p>
-               <i>
-                <p class="desc-fin">Desc__</p>
-               </i> 
-               <p>Valor:__</p>
-               <hr>
-            </div>    
+            
+    
     </main>
 </body>
 </html>
