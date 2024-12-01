@@ -73,17 +73,15 @@ main div img{
     width: 80%;
     border-radius: 0.1rem;
 }
-
-main p, main h2{
-    color: white;
-
+.Back{
+    border: none;
 }
 #LoginTxt{
     display: flex;
     justify-content: center;
     align-items: end;
 }
-#LoginTxt h1{
+h1, p, h2{
     color: white;
     font-family: Arial;
 }
@@ -145,6 +143,51 @@ header span{
 header span p{
     font-size: 14px;
 }
+#MyFinancesTxt{
+    display: flex;
+    justify-content: center;
+}
 .CreateFinances{
+    display: flex;
+    justify-content: center;
+    padding-top: 1.5%;
+}
+.CreateFinances div{
+    display: flex;
+    flex-direction: column;
+    background-color: rgb(37, 37, 37);
+    padding: 3%;
+    padding-top: 0;
+    border-radius: 0.3rem;
+}
+.CreateFinances div span{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    gap: 15px;
+    padding-top: 1.5%;
+}
+#Main_M{
+    display: flex;
+    justify-content: center;  
+    padding: 0; 
+    margin: 1.5%;
+    gap: 15px;
+}
+#Main_M span{
+    border: 1px solid white;
+    border-radius: 0.3rem;
+    padding: 15px;
+    display: flex;
+    flex-direction: column;
+    gap: 0;
+}
+#Main_M span span{
+    border: none;
     
+}
+#Main_M span p{
+    color: white;
+    flex-direction: column;
 }

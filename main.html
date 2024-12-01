@@ -14,29 +14,34 @@
         <Span>
             <img src="img/francis.png" alt="" id="user_photo">
             <p id="user_name">User_Name</p>
+            <a href="index.html">Logoff</a>
         </span>
     </div>
     
     </header>
     <hr>
-    <span id="MyFinancesTxt"><i><h2>Minhas Finanças:</h2></i></span>
+    
     <div class="CreateFinances">
         <div>
         <span><h2>Crie suas finanças:</h2></span>
-        <span><p>Nome da finança: </p></span> <input type="text" id="newName">
-        <span><p>Categoria: </p>
+        <span><p>Nome da finança: </p><input type="text" id="newName">
+            <p>Categoria: </p>
             <select name="createcategoria" id="createCategoria">
             <option value="receitas">Receitas</option>
             <option value="despesa">Despesas</option>
-        </select></span>
+        </select></span> 
         <span>
-            <p>Data: </p> <input type="text" id="newData">
-        </span>
-        <span><p>Valor: </p> <input type="text" id="newValor"></span>
+            <p>Data: </p> <input type="date" id="newData">
+            <p>Valor: </p> <input type="text" id="newValor"></span>
+            <span>
+                <p>Descrição:</p>
+                <input type="text" id="newDesc">
+            </span>
+            <span><button id="CreateFinanca">+ Criar</button></span>
         </div>
-        
     </div>
-    <main class="Main_M">
+    <span id="MyFinancesTxt"><i><h2>Minhas Finanças:</h2></i></span>
+    <main id="Main_M">
             
     
     </main>
