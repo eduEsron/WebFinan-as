@@ -7,6 +7,15 @@ let Password_Login = document.getElementById("Password")
 let LoginBtn = document.getElementById("loginBtn")
 let username = document.getElementById("user_name")
 
+let trilho = document.getElementById('trilho')
+let body = document.querySelector('body')
+trilho.addEventListener('click', ()=>{
+    trilho.classList.toggle('dark')
+    body.classList.toggle('dark')
+})
+
+
+
 if(SignUpBtn){
     SignUpBtn.addEventListener("click", function(){
     if(UserName_SignUp.value == "" || Password_SignUp.value == "" || Password_SignUp2.value == ""){
