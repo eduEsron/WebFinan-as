@@ -82,6 +82,7 @@ function RenderFinancas(dados){
     MainM.appendChild(createExibirDiv)
 }
 if(CreateBtn){
+username.textContent = localStorage.getItem("Name")
     for(const f of finances) {
         RenderFinancas(f)
     }
