@@ -93,29 +93,32 @@ function RenderFinancas(dados){
     `
     MainM.appendChild(createExibirDiv)
     createExibirDiv.querySelector(".Edit").addEventListener('click', function(){
-    const nome = prompt('Digite o novo nome:')
-    const valor = prompt('Digite o valo:r')
-    const descricao = prompt("Digite a descrição:")
-    if(nome !== null){
-        dados.name = nome
-    } 
-    if(valor !== null){
-        dados.value = valor
-    } 
-    if(descricao !== null){
-        dados.descricao = descricao
-    }        
-    })
-    createExibirDiv.querySelector(".deleteBtn").addEventListener('click', function (){
-        finances = finances.filter(x => x !== dados)
-    localStorage.setItem("finances", JSON.stringify(finances))
+        const nome = prompt('Digite o novo nome:')
+        const valor = prompt('Digite o valo:r')
+        const descricao = prompt("Digite a descrição:")
+        if(nome !== null){
+            dados.name = nome
+        } 
+        if(valor !== null){
+            dados.value = valor
+        } 
+        if(descricao !== null){
+            dados.descricao = descricao
+        }
+        localStorage.setItem("finances", JSON.stringify(finances))
         MainM.innerHTML = ""
         for (const f of finances) {
             RenderFinancas(f)
         }
-   
-      })
-    
+    })
+    createExibirDiv.querySelector(".deleteBtn").addEventListener('click', function (){
+        finances = finances.filter(x => x !== dados)
+        localStorage.setItem("finances", JSON.stringify(finances))
+        MainM.innerHTML = ""
+        for (const f of finances) {
+            RenderFinancas(f)
+        }
+    })
 }
 if(CreateBtn){
 username.textContent = localStorage.getItem("Name")
