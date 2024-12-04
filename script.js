@@ -14,8 +14,6 @@ trilho.addEventListener('click', ()=>{
     body.classList.toggle('dark')
 })
 
-
-
 if(SignUpBtn){
     SignUpBtn.addEventListener("click", function(){
     if(UserName_SignUp.value == "" || Password_SignUp.value == "" || Password_SignUp2.value == ""){
@@ -57,7 +55,16 @@ function saveFinances() {
     localStorage.setItem("finances", JSON.stringify(finances))
 }
 function CriarFinancas(){
-  let dados = {
+    if(newName.value == "" || newData.value == ""){
+        alert("Preencha todos os campos!")
+    }
+    else{
+    if(isNaN(newValue.value)){
+        alert("Valor Invalido!")
+        newValue.style.borderColor = "red"
+    }
+    else{
+        let dados = {
         name: newName.value,
         categoria: newCategoria.value,
         data: newData.value,
@@ -66,7 +73,12 @@ function CriarFinancas(){
     }
     finances.push(dados)
     saveFinances()
-    RenderFinancas(dados)
+    RenderFinancas(dados) 
+    newValue.style.borderColor = "light-dark"
+    }
+
+    }
+
 }
 function RenderFinancas(dados){
     let MainM = document.getElementById("Main_M")
@@ -77,9 +89,33 @@ function RenderFinancas(dados){
     <p>Data: ${dados.data}</p>
     <p>Valor: ${dados.valor}</p>
     <p>Descrição: ${dados.descricao}</p>
-    <span><button id="Edit">Editar</button><button id="Delete">Deletar</button></span>
+    <span><button class="Edit">Editar</button><button class="deleteBtn">Deletar</button></span>
     `
     MainM.appendChild(createExibirDiv)
+    createExibirDiv.querySelector(".Edit").addEventListener('click', function(){
+    const nome = prompt('Digite o novo nome:')
+    const valor = prompt('Digite o valo:r')
+    const descricao = prompt("Digite a descrição:")
+    if(nome !== null){
+        dados.name = nome
+    } 
+    if(valor !== null){
+        dados.value = valor
+    } 
+    if(descricao !== null){
+        dados.descricao = descricao
+    }        
+    })
+    createExibirDiv.querySelector(".deleteBtn").addEventListener('click', function (){
+        finances = finances.filter(x => x !== dados)
+    localStorage.setItem("finances", JSON.stringify(finances))
+        MainM.innerHTML = ""
+        for (const f of finances) {
+            RenderFinancas(f)
+        }
+   
+      })
+    
 }
 if(CreateBtn){
 username.textContent = localStorage.getItem("Name")
@@ -87,4 +123,4 @@ username.textContent = localStorage.getItem("Name")
         RenderFinancas(f)
     }
     CreateBtn.addEventListener("click", CriarFinancas)
-}
+}  
